@@ -103,36 +103,7 @@
             <button onclick="location.href='us.html';">معلومات عنا</button>
             <button onclick="location.href='sign.html';">تسجيل الدخول</button>
         </center>
-    </header>
-    <img id="im2" src="space.jpg" alt="picture">
-    <marquee direction="up" scrollamount="3">Diving Into Space <br>
-        حيث نستكشف أعماق الكون و نستكشف أسراره
-    </marquee>
-    <div class="container mt-5">
-        <div class="card mx-auto" style="max-width: 500px;">
-            <div class="card-body">
-                <h2 class="card-title text-center">إنشاء حساب</h2>
-                    <div class="form-group">
-                        <label for="email">البريد الإلكتروني (اسم المستخدم):</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">الاسم:</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">كلمة المرور:</label>
-                        <input type="password" id="password" name="password" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm-password">إعادة كلمة المرور:</label>
-                        <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
-                    </div>
-                    <button onclick="start_signup()" class="btn btn-primary btn-block">إنشاء حساب</button>
-            </div>
-        </div>
-    </div>
-    <script>
+		<script>
 		function signupUser(email,name, password) {
 			// بناء URL مع البريد الإلكتروني وكلمة المرور
 			const url = `/api/signup?email=${encodeURIComponent(email)}&name=${encodeURIComponent(name)}&psw=${encodeURIComponent(password)}`;
@@ -177,6 +148,35 @@
 			
         });
     </script>
+    </header>
+    <img id="im2" src="space.jpg" alt="picture">
+    <marquee direction="up" scrollamount="3">Diving Into Space <br>
+        حيث نستكشف أعماق الكون و نستكشف أسراره
+    </marquee>
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 500px;">
+            <div class="card-body">
+                <h2 class="card-title text-center">إنشاء حساب</h2>
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني (اسم المستخدم):</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">الاسم:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">كلمة المرور:</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">إعادة كلمة المرور:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
+                    </div>
+                    <button onclick="start_signup()" class="btn btn-primary btn-block">إنشاء حساب</button>
+            </div>
+        </div>
+    </div>
     <br>
     <br>
     <footer>
