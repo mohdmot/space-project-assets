@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="icon" href="title.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        *{
+           margin: 0; 
+           padding: 0;
+        }
+        header{
+            width: 100%;
+            height: 70px;
+            background-color: rgb(246, 246, 249);
+            box-shadow: 0px 0px 12px rgb(33, 33, 91);
+        }
+        header button{
+            width: 140px;
+            padding: 10px;
+            margin-top: 12px;
+            border:none;
+            font-size: 18px;
+            box-shadow: 0px 0px 8px whitesmoke;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            transition: 1s;
+        }
+        header button:hover{
+            color: #07689f;
+            box-shadow: 0px 0px 15px silver;
+
+        }
+        header img{
+            width: 120px;
+            height: 60px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 8px;
+        }
+        #im2{
+           width: 100%; 
+           height: auto;
+           margin-top: 2px;
+        }
+        marquee{
+            position: absolute;
+            top: 170px;
+            right: 700px;
+            color: whitesmoke;
+            text-align: center;
+            font-size: 50px;
+            width: 450px;
+            height: 300px;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        footer {
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .social-icons li {
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ff7e5f;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="title.png" alt="title">
+        </div>
+        <center>
+            
+            <button onclick="location.href='home.html';">الرئيسية</button>
+            <button onclick="location.href='sky.html';">منظر السماء</button>
+            <button onclick="location.href='cont.html';">تواصل معنا</button>
+            <button onclick="location.href='us.html';">معلومات عنا</button>
+            <button onclick="location.href='sign.html';">تسجيل الدخول</button>
+        </center>
+    </header>
+    <img id="im2" src="space.jpg" alt="picture">
+    <marquee direction="up" scrollamount="3">Diving Into Space <br>
+        حيث نستكشف أعماق الكون و نستكشف أسراره
+    </marquee>
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 500px;">
+            <div class="card-body">
+                <h2 class="card-title text-center">إنشاء حساب</h2>
+                <form id="registerForm" action="register.html" method="post">
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني (اسم المستخدم):</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">الاسم:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tribe">القبيلة:</label>
+                        <input type="text" id="tribe" name="tribe" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">كلمة المرور:</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">إعادة كلمة المرور:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">إنشاء حساب</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirm-password').value;
+            if (password !== confirmPassword) {
+                alert('كلمتا المرور غير متطابقتين');
+                event.preventDefault();
+            }
+        });
+    </script>
+    <br>
+    <br>
+    <footer>
+        <ul class="social-icons">
+            <li><a href="mailto:planet.uranus2024@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://x.com/planet_uranus24?s=11" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/planet.uranus2024/profilecard/?igsh=MXhna3NnZW5zZTFybg==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <p>© 2024 جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظر السماء</title>
+    <link rel="icon" href="title.png">
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            height: 70px;
+            background-color: rgb(246, 246, 249);
+            box-shadow: 0px 0px 12px rgb(33, 33, 91);
+        }
+        header button {
+            width: 140px;
+            padding: 10px;
+            margin-top: 12px;
+            border: none;
+            font-size: 18px;
+            box-shadow: 0px 0px 8px whitesmoke;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            transition: 1s;
+        }
+        header button:hover {
+            color: #07689f;
+            box-shadow: 0px 0px 15px silver;
+        }
+        header img {
+            width: 120px;
+            height: 60px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 8px;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 800px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #214083;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .decorative-line {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #536be4, #1f4876);
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .decorative-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -10px;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 5px;
+            background: #2e2b71;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .social-icons li {
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #ff7e5f;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="title.png" alt="title">
+        </div>
+        <center>
+            
+            <button onclick="location.href='home.html';">الرئيسية</button>
+            <button onclick="location.href='sky.html';">منظر السماء</button>
+            <button onclick="location.href='cont.html';">تواصل معنا</button>
+            <button onclick="location.href='us.html';">معلومات عنا</button>
+            <button onclick="location.href='sign.html';">تسجيل الدخول</button>
+        </center>
+    </header>
+    
+    <div class="container">
+        <h1>منظر السماء</h1>
+        <div class="video-container">
+            <iframe src="vr.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <hr class="decorative-line">
+        <p>فكرة قيد التطوير تتيح للمستخدم الاستفادة من معلومات الأجرام السماوية في الفضاء بمساعدة الذكاء الاصطناعي وهي خدمة تفيد جميع الفئات بما فيها فئة ذوي الاحتياجات الخاصة.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <ul class="social-icons">
+            <li><a href="mailto:planet.uranus2024@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://x.com/planet_uranus24?s=11" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/planet.uranus2024/profilecard/?igsh=MXhna3NnZW5zZTFybg==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <p>© 2024 جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية</title>
+    <link rel="icon" href="title.png">
+    <style>
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            width: 100%;
+            height: 70px;
+            background-color: rgb(246, 246, 249);
+            box-shadow: 0px 0px 12px rgb(33, 33, 91);
+        }
+        header button {
+            width: 140px;
+            padding: 10px;
+            margin-top: 12px;
+            border: none;
+            font-size: 18px;
+            box-shadow: 0px 0px 8px whitesmoke;
+            font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            transition: 1s;
+        }
+        header button:hover {
+            color: #07689f;
+            box-shadow: 0px 0px 15px silver;
+        }
+        header img {
+            width: 120px;
+            height: 60px;
+            float: left;
+            margin-top: 5px;
+            margin-left: 8px;
+        }
+        main {
+            flex: 1;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            margin-top: 2px;
+        }
+        marquee {
+            position: absolute;
+            top: 1150px;
+            right: 245px;
+            color: rgb(248, 248, 252);
+            text-align: center;
+            font-size: 45px;
+            width: 1010px;
+            height: 500px; 
+            text-justify: initial;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #im1 {
+            width: 100%; 
+            height: auto;
+        }
+        #d1 div {
+            margin: 30px;
+            padding: 10px;
+            width: 270px;
+            height: 270px;
+            box-shadow: 0px 0px 15px gray;
+            float: left;
+            margin-left: 150px;
+            margin-top: 60px;
+            border-radius: 150px;
+        } 
+        .gallery-container {
+            margin: 30px;
+            margin-left: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-image {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+        .gallery-image img {
+            width: 500px; 
+        }
+        .decorative-line {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #3e4a8f, #2b3d9e);
+            margin: 20px 0;
+            position: relative;
+        }
+        .decorative-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -10px;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 5px;
+            background: #484a79;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        .social-icons li {
+            margin: 0 10px;
+        }
+        .social-icons a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.2s;
+        }
+        .social-icons a:hover {
+            color: #ff7e5f;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="title.png" alt="title">
+        </div>
+        <center>
+            <button onclick="location.href='home.html';">الرئيسية</button>
+            <button onclick="location.href='sky.html';">منظر السماء</button>
+            <button onclick="location.href='cont.html';">تواصل معنا</button>
+            <button onclick="location.href='us.html';">معلومات عنا</button>
+            <button onclick="location.href='sign.html';">تسجيل الدخول</button>
+            
+        </center>
+    </header>
+    <main>
+        <video src="space.mp4" autoplay loop muted></video>
+        <img id="im1" src="nn.jpg" alt="picture">
+
+        <div class="gallery-container" id="gallery">
+            <div class="gallery-image">
+                <img src="1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-image">
+                <img src="2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-image">
+                <img src="3.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-image">
+                <img src="4.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery-image">
+                <img src="5.jpg" alt="Gallery Image 5">
+            </div>
+            <div class="gallery-image">
+                <img src="6.jpg" alt="Gallery Image 6">
+            </div>
+        </div>
+
+        <center>
+            <marquee direction="up" scrollamount="3">
+                <h1 style="font-size: 70px;">Space Treasure</h1><br>
+                <h4 style="font-size: 30px;">Diving Into Space</h4><br>
+                هل تساءلت يومًا عن أسرار النجوم والكواكب والمجرات؟<br>
+                .انضم إلينا في رحلة استكشافية مذهلة عبر الفضاء الواسع <br>
+                ،نقدم لك محتوى تعليمي شيق ومبسط يناسب جميع الأعمار<br>
+                .مع فيديوهات تفاعلية، وتجارب علمية ممتعة<br>
+                !استعد لتوسيع آفاق معرفتك واكتشاف العجائب التي تخبئها السماء <br>
+            </marquee>
+        </center> 
+        <hr class="decorative-line">
+        <div id="d1">       
+            <div>
+                <center>
+                    <a href="kids.html">
+                        <img src="kids.png" alt="kids" title="Kids" width="270px" height="270">
+                    </a>
+                </center>
+            </div>      
+            <div>
+                <center>
+                    <a href="adults.html">
+                        <img src="adults.png" alt="adults" title="Adults" width="270px" height="270">
+                    </a>
+                </center>
+            </div>       
+            <div>
+                <center>
+                    <a href="special-needs.html">
+                        <img src="special.png" alt="special" title="Special needs" width="270px" height="270">
+                    </a>
+                </center>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul class="social-icons">
+            <li><a href="mailto:planet.uranus2024@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+            <li><a href="https://x.com/planet_uranus24?s=11" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/planet.uranus2024/profilecard/?igsh=MXhna3NnZW5zZTFybg==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+        <p>© 2024 جميع الحقوق محفوظة</p>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.gallery-image');
+        const totalImages = images.length;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 3000); 
+
+        showImage(currentIndex);
+    </script>
+</body>
+</html>
