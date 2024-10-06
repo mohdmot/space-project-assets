@@ -112,7 +112,6 @@
         <div class="card mx-auto" style="max-width: 500px;">
             <div class="card-body">
                 <h2 class="card-title text-center">إنشاء حساب</h2>
-                <form id="registerForm" action="register.html" method="post">
                     <div class="form-group">
                         <label for="email">البريد الإلكتروني (اسم المستخدم):</label>
                         <input type="email" id="email" name="email" class="form-control" required>
@@ -122,10 +121,6 @@
                         <input type="text" id="name" name="name" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="tribe">القبيلة:</label>
-                        <input type="text" id="tribe" name="tribe" class="form-control" required>
-                    </div>
-                    <div class="form-group">
                         <label for="password">كلمة المرور:</label>
                         <input type="password" id="password" name="password" class="form-control" required>
                     </div>
@@ -133,22 +128,53 @@
                         <label for="confirm-password">إعادة كلمة المرور:</label>
                         <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
                     </div>
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                    </div>
                     <button type="submit" class="btn btn-primary btn-block">إنشاء حساب</button>
-                </form>
             </div>
         </div>
     </div>
     <script>
+		function signupUser(email,name, password) {
+			// بناء URL مع البريد الإلكتروني وكلمة المرور
+			const url = `/api/signup?email=${encodeURIComponent(email)}&name=${encodeURIComponent(name)}&psw=${encodeURIComponent(password)}`;
+
+			// إرسال الطلب
+			fetch(url)
+				.then(response => {
+					if (!response.ok) {
+						throw new Error('حدث خطأ أثناء الاتصال بالخادم');
+					}
+					return response.json();
+				})
+				.then(data => {
+					// التحقق من حالة الاستجابة
+					if (data.status === 'ok') {
+						alert('تم التسجيل بنجاح!');
+						// تحويل المستخدم بعد ثانيتين
+						setTimeout(() => {
+							window.location.href = 'home.html';
+						}, 2000);
+					} else {
+						alert('خطأ: ' + data.message); // عرض رسالة الخطأ إذا كانت موجودة
+					}
+				})
+				.catch(error => {
+					// عرض تحذير في حالة حدوث خطأ
+					alert('خطأ: ' + error.message);
+				});
+		}
         document.getElementById('registerForm').addEventListener('submit', function(event) {
             var password = document.getElementById('password').value;
             var confirmPassword = document.getElementById('confirm-password').value;
             if (password !== confirmPassword) {
                 alert('كلمتا المرور غير متطابقتين');
                 event.preventDefault();
+				return
             }
+			email = document.getElementById('email').value
+			name = document.getElementById('name').value
+			password = document.getElementById('password').
+			signupUser(email,name,password)
+			
         });
     </script>
     <br>
