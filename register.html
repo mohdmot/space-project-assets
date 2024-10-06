@@ -128,7 +128,7 @@
                         <label for="confirm-password">إعادة كلمة المرور:</label>
                         <input type="password" id="confirm-password" name="confirm-password" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">إنشاء حساب</button>
+                    <button id="create_acc" class="btn btn-primary btn-block">إنشاء حساب</button>
             </div>
         </div>
     </div>
@@ -162,7 +162,7 @@
 					alert('خطأ: ' + error.message);
 				});
 		}
-        document.getElementById('registerForm').addEventListener('submit', function(event) {
+        document.getElementById('create_acc').addEventListener('onclick', function(event) {
             var password = document.getElementById('password').value;
             var confirmPassword = document.getElementById('confirm-password').value;
             if (password !== confirmPassword) {
