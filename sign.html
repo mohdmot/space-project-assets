@@ -109,8 +109,8 @@
     </marquee>
 	<script>
 	function loginUser() {
-	email = document.getElementById('username')
-	password = document.getElementById('password')
+	email = document.getElementById('username').value
+	password = document.getElementById('password').value
     // بناء URL مع البريد الإلكتروني وكلمة المرور
     const url = `/api/login?email=${encodeURIComponent(email)}&psw=${encodeURIComponent(password)}`;
 
